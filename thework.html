@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="password" type="text">
+    <input id="confirm" type="text">
+    <button onclick="verify()">Verify</button>
+<br><br>
+    <input id="age" type="number">
+    <button onclick="clickb()">Click</button>
+    <h1 id="view"></h1>
+    <button onclick="registeer()">register</button>
+</body>
+</html>
+<script>
+let password = document.getElementById('password')
+
+let confirm = document.getElementById('confirm')
+
+function verify() {
+    if (password.value==confirm.value){
+        alert('password match')
+    }else{
+     alert('password did not match')
+    }
+}
+
+
+
+    let view = document.getElementById('view')
+
+
+    let age = document.getElementById("age")
+
+   function clickb(){
+    if (age.value < 18) {
+        alert('sorry, you are not eligible to gain access')
+        view.innerHTML = 'God is good'
+    }else{
+
+        alert('congratulations, you are eligible for this program')
+    }
+   }
+
+   function registeer() {
+    view.innerHTML= 'successful'
+   }
+</script>
